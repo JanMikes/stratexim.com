@@ -1,0 +1,65 @@
+---
+const t = {
+  title: { en: 'Contact Us', cz: 'Kontaktujte nás' },
+  subtitle: { en: 'Ready to discuss your tactical textile requirements? Get in touch with our team.', cz: 'Připraveni projednat vaše požadavky na taktické textilie? Kontaktujte náš tým.' },
+};
+---
+
+<section id="contact" class="py-32 px-6 relative overflow-hidden bg-black">
+  <!-- Background gradient orbs -->
+  <div class="section-orb section-orb-indigo w-[400px] h-[400px]" style="bottom: 10%; left: 10%;"></div>
+  <div class="section-orb section-orb-blue w-[350px] h-[350px]" style="top: 20%; right: 5%;"></div>
+
+  <!-- Section divider -->
+  <div class="absolute top-0 left-0 w-full h-px section-divider"></div>
+
+  <!-- Central glow -->
+  <div
+    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full blur-3xl"
+    style="background: radial-gradient(ellipse at center, rgba(30, 58, 138, 0.08) 0%, rgba(37, 99, 235, 0.04) 50%, transparent 70%)"
+  ></div>
+
+  <div class="container mx-auto max-w-2xl text-center relative z-10 scroll-reveal">
+    <p class="text-xs tracking-[0.4em] text-white/40 uppercase mb-4">
+      Get In Touch
+    </p>
+    <h2 class="text-3xl md:text-5xl font-light mb-8 tracking-tight hero-gradient-text">
+      <span class="lang-en">{t.title.en}</span>
+      <span class="lang-cz">{t.title.cz}</span>
+    </h2>
+
+    <p class="text-white/50 mb-14 leading-relaxed text-lg">
+      <span class="lang-en">{t.subtitle.en}</span>
+      <span class="lang-cz">{t.subtitle.cz}</span>
+    </p>
+
+    <a
+      href="mailto:info@stratexim.com"
+      class="group relative inline-flex items-center gap-4 px-10 py-5 rounded-full overflow-hidden transition-all duration-500"
+    >
+      <!-- Animated gradient border -->
+      <span class="absolute inset-0 rounded-full p-[1px] bg-gradient-to-r from-blue-800/50 via-blue-600/50 to-sky-500/50 opacity-50 group-hover:opacity-100 transition-opacity duration-500">
+        <span class="absolute inset-[1px] rounded-full bg-black"></span>
+      </span>
+
+      <!-- Hover fill -->
+      <span class="absolute inset-[1px] rounded-full bg-gradient-to-r from-blue-800/80 via-blue-600/80 to-sky-500/80 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+
+      <!-- Glow effect -->
+      <span class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl bg-gradient-to-r from-blue-800/30 via-blue-600/30 to-sky-500/30"></span>
+
+      <!-- Content -->
+      <svg class="w-5 h-5 text-white/70 group-hover:text-white transition-colors duration-300 relative z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+        <polyline points="22,6 12,13 2,6"></polyline>
+      </svg>
+      <span class="text-sm tracking-[0.15em] text-white/80 group-hover:text-white transition-colors duration-300 relative z-10">
+        info@stratexim.com
+      </span>
+      <svg class="w-4 h-4 text-white/50 group-hover:text-white group-hover:translate-x-2 transition-all duration-300 relative z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+  </div>
+</section>

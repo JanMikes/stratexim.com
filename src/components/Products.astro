@@ -1,0 +1,95 @@
+---
+const t = {
+  title: { en: 'Our Products', cz: 'Naše produkty' },
+  uniforms: { en: 'Uniforms & Clothing', cz: 'Uniformy a oblečení' },
+  uniformsDesc: { en: 'Tactical uniforms, combat clothing and protective garments designed for operational excellence.', cz: 'Taktické uniformy, bojové oblečení a ochranné oděvy navržené pro operační excelenci.' },
+  tactical: { en: 'Tactical Gear', cz: 'Taktické vybavení' },
+  tacticalDesc: { en: 'Vests, carriers and equipment engineered for maximum protection and mobility.', cz: 'Vesty, nosiče a vybavení navržené pro maximální ochranu a mobilitu.' },
+  fabrics: { en: 'Protective Fabrics', cz: 'Ochranné tkaniny' },
+  fabricsDesc: { en: 'Ballistic textiles, flame-resistant materials and advanced protective solutions.', cz: 'Balistické textilie, nehořlavé materiály a pokročilá ochranná řešení.' },
+  cbrn: { en: 'CBRN Protective Suits', cz: 'CBRN ochranné obleky' },
+  cbrnDesc: { en: 'Specialized chemical, biological, radiological, and nuclear protection systems.', cz: 'Specializované systémy ochrany proti chemickým, biologickým, radiologickým a nukleárním hrozbám.' },
+};
+
+const products = [
+  { title: t.uniforms, desc: t.uniformsDesc, icon: 'user' },
+  { title: t.tactical, desc: t.tacticalDesc, icon: 'shield' },
+  { title: t.fabrics, desc: t.fabricsDesc, icon: 'layers' },
+  { title: t.cbrn, desc: t.cbrnDesc, icon: 'package' },
+];
+---
+
+<section id="products" class="py-32 px-6 relative overflow-hidden bg-black">
+  <!-- Background gradient orbs -->
+  <div class="section-orb section-orb-blue w-[350px] h-[350px]" style="top: 5%; right: -8%;"></div>
+  <div class="section-orb section-orb-emerald w-[300px] h-[300px]" style="bottom: 10%; left: -5%;"></div>
+
+  <!-- Section divider -->
+  <div class="absolute top-0 left-0 w-full h-px section-divider"></div>
+
+  <!-- Subtle grid pattern -->
+  <div class="absolute inset-0 grid-pattern opacity-30"></div>
+
+  <div class="container mx-auto max-w-6xl relative z-10">
+    <div class="text-center mb-20 scroll-reveal">
+      <p class="text-xs tracking-[0.4em] text-white/40 uppercase mb-4">
+        What We Offer
+      </p>
+      <h2 class="text-3xl md:text-5xl font-light tracking-tight hero-gradient-text">
+        <span class="lang-en">{t.title.en}</span>
+        <span class="lang-cz">{t.title.cz}</span>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 lg:gap-8 scroll-reveal-stagger">
+      {products.map((product) => (
+        <div class="group relative p-8 lg:p-10 rounded-2xl card-gradient-border">
+          <div class="relative">
+            <div class="flex items-start gap-6">
+              <div class="shrink-0">
+                <div class="icon-glow w-14 h-14 rounded-xl flex items-center justify-center">
+                  {product.icon === 'user' && (
+                    <svg class="w-6 h-6 text-white/70 group-hover:text-sky-400 transition-colors duration-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                  )}
+                  {product.icon === 'shield' && (
+                    <svg class="w-6 h-6 text-white/70 group-hover:text-sky-400 transition-colors duration-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                  )}
+                  {product.icon === 'layers' && (
+                    <svg class="w-6 h-6 text-white/70 group-hover:text-sky-400 transition-colors duration-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                      <polyline points="2 17 12 22 22 17"></polyline>
+                      <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                  )}
+                  {product.icon === 'package' && (
+                    <svg class="w-6 h-6 text-white/70 group-hover:text-sky-400 transition-colors duration-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line>
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                      <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                      <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                  )}
+                </div>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold mb-3 tracking-wide">
+                  <span class="lang-en">{product.title.en}</span>
+                  <span class="lang-cz">{product.title.cz}</span>
+                </h3>
+                <p class="text-white/50 leading-relaxed group-hover:text-white/70 transition-colors duration-400">
+                  <span class="lang-en">{product.desc.en}</span>
+                  <span class="lang-cz">{product.desc.cz}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
