@@ -196,7 +196,7 @@ export const translations = {
     },
     footer: {
       rights: 'All rights reserved.',
-      companyText: 'STRATEXIM is a brand of Bonimport Global s.r.o. · Company ID 23035650 · VAT CZ23035650 · Čujkovova 1714/21, 700 30 Ostrava, Czech Republic · +420 776 655 106',
+      companyText: 'STRATEXIM is a brand of Bonimport Global s.r.o. · Company ID 23035650 · VAT CZ23035650 · Dlouhá 3403/2b, 702 00 Ostrava, Czech Republic · +420 776 655 106',
       privacyLabel: 'Privacy Policy',
     },
     legal: {
@@ -387,7 +387,7 @@ export const translations = {
     },
     footer: {
       rights: 'Všechna práva vyhrazena.',
-      companyText: 'STRATEXIM je značka společnosti Bonimport Global s.r.o. · IČO 23035650 · DIČ CZ23035650 · Čujkovova 1714/21, 700 30 Ostrava · +420 776 655 106',
+      companyText: 'STRATEXIM je značka společnosti Bonimport Global s.r.o. · IČO 23035650 · DIČ CZ23035650 · Dlouhá 3403/2b, 702 00 Ostrava · +420 776 655 106',
       privacyLabel: 'Ochrana osobních údajů',
     },
     legal: {
@@ -578,7 +578,7 @@ export const translations = {
     },
     footer: {
       rights: 'Alle Rechte vorbehalten.',
-      companyText: 'STRATEXIM ist eine Marke der Bonimport Global s.r.o. · ID-Nr. 23035650 · USt-IdNr. CZ23035650 · Čujkovova 1714/21, 700 30 Ostrava, Tschechien · +420 776 655 106',
+      companyText: 'STRATEXIM ist eine Marke der Bonimport Global s.r.o. · ID-Nr. 23035650 · USt-IdNr. CZ23035650 · Dlouhá 3403/2b, 702 00 Ostrava, Tschechien · +420 776 655 106',
       privacyLabel: 'Datenschutz & Impressum',
     },
     legal: {
